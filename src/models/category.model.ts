@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-interface ICategory {
+export interface ICategory {
     categoryName: string,
     categoryDescription: string,
     isActive: boolean

@@ -17,7 +17,6 @@ class FranchiseController {
    */
   static create = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      console.log(req.body); // Log the request body for debugging
       const franchise = await FranchiseService.createFranchise(req.body);
       res.status(201).json(franchise);
     } catch (error) {
@@ -60,7 +59,6 @@ class FranchiseController {
    */
   static getById = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      console.log(req.params); // Log request parameters for debugging
       const franchise = await FranchiseService.getFranchiseById(req.params.id);
       
       if (!franchise) return next({ error: "Franchise not found" });

@@ -1,15 +1,15 @@
 import { Router } from "express";
 import userRoute from "./user.route";
 import categoryRoute from './category.route'
-import franchiseRoute from './franchise.route'
+import franchiseRouter from "./franchise.route";
 
 const router = Router();
 
 
 const routes = [
   { path: "/user", handler: userRoute },
-  { path: "/category", handler: categoryRoute },
-  { path: "/franchises", handler: franchiseRoute }
+  { path: "/categories", handler: categoryRoute },
+  { path: "/franchises", handler: franchiseRouter }
 ];
 
 // Register routes
